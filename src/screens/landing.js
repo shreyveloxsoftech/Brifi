@@ -4,16 +4,25 @@ import AppButton from '../components/common/AppButton'
 
 export default class App extends React.Component {
    state = {
-      myState: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, used do eiusmod'
+        title1: 'Brifi',
+        title2: 'Enably',
    }
-   updateState = () => {
-      this.setState({ myState: 'The state is updated' })
-   }
+
    render() {
       return (
-         <View>
-            <AppButton myState = {this.state.myState} updateState = {this.updateState}/>
+         <View style={StyleSheet.container}>
+            <AppButton myState = {this.state.title1} onPress={console.log('Pressed')} />
+            <AppButton myState = {this.state.title2}/>
          </View>
       );
    }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        alignContent: "center",
+    }
+})

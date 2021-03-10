@@ -13,8 +13,8 @@ const AppButton = (props) => {
     }
     return (
         <View>
-            <TouchableOpacity onPress={props.updateState}>
-                <Text style={styles.button}>
+            <TouchableOpacity onPress={props.updateState} style={styles.button}>
+                <Text style={styles.buttonText}>
                     {props.myState}
                 </Text>
             </TouchableOpacity>
@@ -24,14 +24,23 @@ const AppButton = (props) => {
 export default AppButton
 
 const styles = StyleSheet.create({
+    
     button: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        borderRadius: 30,
-        backgroundColor: '#1e365c',
-        paddingHorizontal: 22,
-        paddingVertical: 15,
-        alignItems: 'center',
-        color: 'white'
+        justifyContent: "center",
+        alignItems: "center",
+        width: "80%",
+        height: 200,
+        padding: 20,
+        backgroundColor: "#1e365c",
+        marginLeft: "10%",
+        marginTop: "10%",
+        marginBottom: 40,
+        elevation: 8,
+    },
+
+    buttonText: {
+        color: "white",
+        textAlign: "center",
+        fontSize: 20,
     }
 })
